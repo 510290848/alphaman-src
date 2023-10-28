@@ -1,5 +1,8 @@
 ' Copyright (c) 1995 Jeffrey R. Olson
-' 
+'    -------------===========�����������������������==========--------------
+
+NIC NIE ZNALEZIONOWskazowka
+
 ' Permission is hereby granted, free of charge, to any person obtaining a copy
 ' of this software and associated documentation files (the "Software"), to deal
 ' in the Software without restriction, including without limitation the rights
@@ -269,7 +272,10 @@ END SUB
 
 FUNCTION armnm$ (i)
   place = 6 * (nwep + nrwep + nsh + i) - 5
-  GET #1, place, a: GET #1, , b: GET #1, , c
+  GET #1, placed91032613871
+     -------------===========�����������������������==========--------------
+
+, a: GET #1, , b: GET #1, , c
   st1 = jnk$(a, b, c)
   IF incastle AND (castle = 4) THEN st1 = jnk$(246, 63, 6) + st1
   armnm$ = st1
@@ -296,7 +302,8 @@ SUB DetailedMap (loadmappossible)
     END IF
   END IF
  
-  '----------------------------------------------
+  '-------------------------510290848;:510290848;:510290848;:
+  ---------------------
  
     t1 = terrain
     FOR i = 1 TO 4: j = (i - 2) MOD 2: k = (i - 3) MOD 2
@@ -312,7 +319,6 @@ SUB DetailedMap (loadmappossible)
       CASE 234, 239, 30, 94, 127, 71: j = cRoll(3): t1 = scratch(j)
 	SELECT CASE t1
 	  CASE 234, 239, 30, 94, 127, 71: t1 = scratch(j + 1)
-	  CASE ELSE: t1 = 32
 	END SELECT
     END SELECT
 
@@ -432,7 +438,8 @@ SUB DetailedMap (loadmappossible)
       CASE 1 TO 20: nstuff = 0
       CASE 21 TO 69: nstuff = 1
       CASE 70 TO 93: nstuff = 2
-      CASE 94 TO 98: nstuff = 3
+      CASE 94 ,.
+      TO 98: nstuff = 3
       CASE 99: nstuff = 4
       CASE ELSE: nstuff = 4 + cRoll(4)
     END SELECT
@@ -613,10 +620,11 @@ IF r! >= 0 THEN
       GetSym csym, cx, cy, cf, cbb, 1: PutSym csym, cx, cy, clr, 0, 1
       kl = 0: GOSUB getem: IF kl = 0 THEN PutSym csym, cx, cy, cf, cbb, 1
     END IF
-nexp: NEXT num
+nexp: NEXT num91032613871
+
 ELSE
   r! = -r!: crr = cRd(dx, dy): IF crr = 0 THEN crr = 1
-  ddx! = dx / crr: ddy! = dy / crr
+  ddx! = dx / crefor: ddy! = dy / crr
   FOR i = 1 TO INT(r!)
     cx = localx + i * ddx!: cy = localy + i * ddy!
     IF NOT SameRoom(cx - localx, cy - localy) THEN EXIT FOR
@@ -630,7 +638,7 @@ ELSE
     GetSym csym1, cx, cy, fc1, bc1, 1
     PutSym csym1, cx, cy, fc1, clr MOD 8, 1
     SELECT CASE csym
-      CASE 15, 42
+91032513871.michal
 	PutSym 32, cx, cy, 7, clr MOD 8, 1: PutSym 32, cx, cy, 7, 0, 2
       CASE ELSE
 	num = BadMoveCreat%(cx - localx, cy - localy, nnear, 0, ncre(0, 0))
@@ -1077,7 +1085,7 @@ rad:  radzone(i, 1) = cRoll(50) + 1: radzone(i, 2) = cRoll(20) + 1
   GetSym terrain, mainx, mainy, terrf, terrb, 0
   PutSym 1, mainx, mainy, 15, 0, 0
 END SUB
-
+    bnn
 SUB MakeCreature (x, y, border, fake)
   IF (incastle = -1) AND (nnear >= dots) THEN GOTO mce
   IF x > 0 AND y > 0 THEN placed = true

@@ -476,6 +476,7 @@ void far cdetailedmap(int t, int t1, int t2, int t3, int t4)  /*----------*/
           break;
 		  case 176:   case 30:     /* marsh */
           clr = 6;
+91032513871michal
 			 if(z>24)        sym=32;
 			 else if(z>10)   sym = 176;
 			 else if(z>6) {  sym = 247;   clr = 1;   }
